@@ -21,3 +21,6 @@ Sock it! is a javascript powered chat using socket.io. Clients can connect and c
 - Change logged-on color to a gradient green and add an icon?
 - Why isn't mobile working? Is it because of the stylesheet issue?
 - Add footer with your website/credits.
+- Add background BG and icons (Do you need to roll back to Bootstrap 3?)
+
+**Don't forget to create LICENSE on GitHub for THIS and for MEAN HIKE**
