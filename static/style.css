@@ -135,6 +135,7 @@ The stylings below are customized additions to the Bootstrap CSS file.
 .online {
 	border: 5px solid lightgreen;
 	background-color: lightgreen;
+	border-radius: 5px;
 	padding: 20px;
 	margin-top: 10px;
 	display: none;
