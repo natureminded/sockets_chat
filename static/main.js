@@ -29,7 +29,7 @@ $(document).ready(function() {
 			*/
 
 			// Add user as HTML element to DOM:
-			$('#peopleOnline').append('<div id="'+user.id+'" class="online"><h1>'+user.name+'</h1></div>');
+			$('#peopleOnline').append('<div id="'+user.id+'" class="online margin-bottom-sm"><h3> '+user.name+'</h3></div>');
 		},
 		checkDupes : function(name, users){
 			/*
@@ -80,21 +80,33 @@ $(document).ready(function() {
 		// Prompt New User:
 		var name = prompt('Enter your name to join the chat!');
 
-		// Check that name is at least 1 character:
-		while (name.length < 1){
-			alert('Your name must be at least 1 character, please enter a new name. 😇');
-			name = prompt('Please choose a new name:');
+		// If name is filled out, validate it:
+		if (name) {
+
+			// Check that name is less than 15 characters:
+			while (name.length > 10){
+				alert('Your name must be less than 10 characters, please enter a new name. 😁');
+				name = prompt('Please choose a new name:');
+			}
+
+			// Check if duplicate name is detected:
+			while (methods.checkDupes(name, users) == true) {
+				alert('This username is taken. Try again! 😃');
+				name = prompt('Please choose a unique name:');
+			}
+
+			// Set username to "chatting as" text and emit new User:
+			$('#name').text(name);
+			socket.emit('newUser', name);
+
+			// Focus on message field so user can start typing:
+			$('#chatMsg').focus();
+
+		} else {
+			alert('We\'re sorry, but you have to choose a name... 🙈');
+			location.reload();
 		}
 
-		// Check if duplicate name is detected:
-		while (methods.checkDupes(name, users) == true) {
-			alert('This username is taken. Try again! 😃');
-			name = prompt('Please choose a unique name:');
-		}
-
-		// Set username to "chatting as" text and emit new User:
-		$('#name').text(name);
-		socket.emit('newUser', name);
 	});
 
 	socket.on('getUsers', function(users){
@@ -166,7 +178,7 @@ $(document).ready(function() {
 
 		// Validate that chat msg is < 0 characters:
 		if ($('#chatMsg').val() < 1) {
-			
+
 			alert('Your message must be at least 1 character long.');
 
 			// Prevent form submission:

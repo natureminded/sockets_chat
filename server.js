@@ -4,7 +4,7 @@ var path = require('path');
 var port = 8000;
 var app = express();
 
-// SETUP EJS AND STATIC FOLDER
+// SETUP EJS, STATIC & OTHER NEEDED FOLDERS
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 app.use(express.static(path.join(__dirname, 'static')));

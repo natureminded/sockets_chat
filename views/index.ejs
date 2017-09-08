@@ -9,8 +9,10 @@
 	<link rel="stylesheet" href="style.css">
 	<!-- United Theme -->
 	<link rel="stylesheet" href="bootstrap-united.min.css">
-	<!-- Load Octicons -->
-	<link rel="stylesheet" href="/octicons/build/octicons.css">
+	<!-- Font Awesome -->
+	<script src="https://use.fontawesome.com/f71bf44879.js"></script>
+	<!-- Popper -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
 	<!-- jQuery -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<!-- Socket.io File -->
@@ -24,50 +26,38 @@
 	    <!-- Welcome Responsive Row -->
 	    <div class="row-fluid">
 	        <div class="col-md-12">
-				<span class="glyphicon glyphicon-align-left" aria-hidden="true"></span>
-				<h1><span class="octicon octicon-clippy"></span> Sock It! <small>Chat using sockets.</small></h1>
+				<h1><i class="fa fa-superpowers" aria-hidden="true"></i> Sock It! <small>Chat using sockets.</small></h1>
 				<hr>
 			</div>
 		</div>
 		<!-- Online User's Row and Chat Log Row -->
 		<div class="row-fluid">
 			<!-- Users -->
-			<div class="col-md-4">
+			<div class="col-md-3">
 				<div id="peopleOnline" class="text-center margin-bottom-sm"></div>
 			</div>
 			<!-- Chat Log -->
-			<div class="col-md-8">
+			<div class="col-md-9">
 				<div id="chat"></div>
 			</div>
 		</div>
 		<!-- Chat Textarea -->
 		<div class="row-fluid">
 			<div class="col-md-12">
-				<div class="form-group">
-					<label for="chatMsg"><h3>Say something:</h3></label>
+				<div class="form-group margin-top-sm">
 					<form action="">
 						<div class="form-group">
 							<div class="input-group">
-								<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+								<span class="input-group-addon"><i class="fa fa-comment" aria-hidden="true"></i></span>
 								<input type="text" name="chatMsg" class="form-control input-lg" id="chatMsg">
 							</div>
 						</div>
-						<button type="submit" class="btn btn-primary btn-block margin-top-sm"><h4>Send</h4></button>
+						<button type="submit" class="btn btn-primary btn-block margin-top-sm"><h4><i class="fa fa-send" aria-hidden="true"></i> Send</h4></button>
 					</form>
-					<h4><em>Chatting as: <span id="name"></span></em></h4>
+					<h4><i class="fa fa-user-circle" aria-hidden="true"></i> <em>Chatting as: <span id="name"></span></em></h4>
 				</div>
-
-
 			</div>
 		</div>
-
-
-
 	</div> <!-- End Container -->
-	<!-- BootStrap Features @ End of `<body>` -->
-	<!-- Popper -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-	<!-- Bootstrap Min -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
 </body>
 </html>

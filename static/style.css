@@ -128,23 +128,33 @@ The stylings below are customized additions to the Bootstrap CSS file.
 /*		  MAIN STYLES 		*/
 /****************************/
 
+ /*Set body color */
+ body {
+ 	background-color: whitesmoke !important;
+ }
+
 /* Online Users Styles */
 #peopleOnline {
 	display: inline-block;
+    height: 420px;
+    width: 100%;
+    padding: 0px 16px;
+    overflow-y: auto;
 }
 
 .online {
 	border: 5px solid lightgreen;
 	background-color: lightgreen;
 	border-radius: 5px;
+    width: 100%;
 	padding: 20px;
-	margin-top: 10px;
 	display: none;
 }
 
 /* Chat Styles */
 #chat {
-	overflow-y: scroll;
+	overflow-y: auto;
+    word-wrap: break-word;
 	height: 420px;
 	padding: 14px 16px;
 	font-size: 18px;
