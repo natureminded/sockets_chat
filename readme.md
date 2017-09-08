@@ -14,13 +14,11 @@ Sock it! is a javascript powered chat using socket.io. Clients can connect and c
 
 	1. Use keycodes (see Pacman assignment) to do type detection so users
 	can see 'so and so is typing...'
+	2. Clean up mobile experience so chat isn't so far down page -- change the way users are displayed?
+	3. Create 1-1 chats when clicking users.
 
 ### Need to Do:
 
-- Stylize chat so username has a color and maybe even more spacing between comments.
-- Change logged-on color to a gradient green and add an icon?
-- Why isn't mobile working? Is it because of the stylesheet issue?
+- Change logged-on color to a gradient green?
 - Add footer with your website/credits.
-- Add background BG and icons (Do you need to roll back to Bootstrap 3?)
-
-**Don't forget to create LICENSE on GitHub for THIS and for MEAN HIKE**
+- **Don't forget to create LICENSE on GitHub for THIS and for MEAN HIKE**
