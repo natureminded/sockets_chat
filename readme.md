@@ -2,7 +2,7 @@
 Sock it! is a javascript powered chat using socket.io. Clients can connect and chat with each other.
 
 # Feature List So Far & General Notes:
-
+	+ Integrates Octicons by GitHub
 	+ Displays currently logged in users.
 	+ New users fade in.
 	+ Maintains chat history (100 entries).

@@ -128,7 +128,8 @@ The stylings below are customized additions to the Bootstrap CSS file.
 /*		  MAIN STYLES 		*/
 /****************************/
 
-#peopleOnline{
+/* Online Users Styles */
+#peopleOnline {
 	display: inline-block;
 }
 
@@ -141,7 +142,20 @@ The stylings below are customized additions to the Bootstrap CSS file.
 	display: none;
 }
 
-#chat{
+/* Chat Styles */
+#chat {
 	overflow-y: scroll;
-	height: 500px;
+	height: 420px;
+	padding: 14px 16px;
+	font-size: 18px;
+	line-height: 1.3333333;
+	color: #333333;
+	background-color: #ffffff;
+	background-image: none;
+	border: 1px solid #cccccc;
+	border-radius: 6px;
+}
+
+.name {
+    font-weight: bolder;
 }

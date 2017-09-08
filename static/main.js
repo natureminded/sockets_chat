@@ -16,7 +16,7 @@ $(document).ready(function() {
 			*/
 
 			// Add message as a new <p> element:
-			$('#chat').append('<p>(' + message.timestamp + ') ' + message.message + '</p>');
+			$('#chat').append('<p><em>(' + message.timestamp + ')</em> ' + message.message + '</p>');
 			// Scroll to most recent chat entry (scrolls to bottom of chat):
 			$('#chat').scrollTop($('#chat')[0].scrollHeight);
 		},
@@ -164,14 +164,27 @@ $(document).ready(function() {
 		Post chat when send button is clicked:
 		*/
 
-		// Emit to chat posted and send chat message:
-		socket.emit('chatPosted', $('#chatMsg').val());
+		// Validate that chat msg is < 0 characters:
+		if ($('#chatMsg').val() < 1) {
+			
+			alert('Your message must be at least 1 character long.');
 
-		// Clear out text field so submitted chat text is emptied from user input:
-		$('#chatMsg').val('');
+			// Prevent form submission:
+			return false;
 
-		// Prevents chat form from actually sending to server (there is no server here, only our pseudo-sockets server). Prevents page from refreshing:
-		return false;
+		} else {
+			// Else if chat msg is greater than 1 character, go ahead and post it and clear the field:
+
+			// Emit to chat posted and send chat message:
+			socket.emit('chatPosted', $('#chatMsg').val());
+
+			// Clear out user input:
+			$('#chatMsg').val('');
+
+			// Prevents form submission:
+			return false;
+		}
+
 	});
 
 	socket.on('updateChat', function(message){
