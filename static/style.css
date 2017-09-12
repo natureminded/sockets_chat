@@ -2,10 +2,15 @@
 The stylings below are customized additions to the Bootstrap CSS file.
 */
 
+
 /*************************/
 /*     BOOTSTRAP FIX:    */
 /*************************/
-.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
+
+.nav, .pagination, .carousel, .panel-title a {
+    cursor: pointer;
+}
+
 
 /*************************/
 /*       PADDING:        */
@@ -50,6 +55,7 @@ The stylings below are customized additions to the Bootstrap CSS file.
 .padding-all-sm {
     padding: 15px;
 }
+
 
 /*************************/
 /*       MARGIN:         */
@@ -128,44 +134,156 @@ The stylings below are customized additions to the Bootstrap CSS file.
 /*		  MAIN STYLES 		*/
 /****************************/
 
- /*Set body color */
- body {
- 	background-color: whitesmoke !important;
- }
+
+/* Set body color */
+
+body {
+    background-color: whitesmoke !important;
+}
+
+
+/***************************************/
+/*		  MAKE FULL SCREEN HEIGHT      */
+/***************************************/
+
+/* Make chat window scrollable in full screen mode: */
+#chat-wrapper {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+/* Non-Mobile Full Screen */
+@media (min-width: 1007px) {
+    html, body, .container-fluid, .full-height {
+        height: 100%;
+    }
+
+    .col-md-6 h1 {
+        margin-bottom: auto;
+        margin-top: auto;
+    }
+
+    .col-md-6 {
+	    margin-bottom: 20px;
+    }
+
+    .container-fluid {
+        display: table;
+        width: 100%;
+    }
+
+    .full-height {
+        display: table-row;
+    }
+
+    #chat-wrapper {
+	    height: 100%;
+    }
+
+    .col-md-3, .col-md-9 {
+        height: 100%;
+    }
+
+    .portfolio {
+        float: right;
+    }
+}
+
+/* Mobile Formatting */
+@media (max-width: 1006px) {
+    #chat-wrapper {
+	    height: 300px;
+    }
+
+    #chat {
+        height: 300px;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .col-md-3.online-users {
+    	height: 150px;
+    	margin-bottom: 15px;
+    }
+
+    .btn.btn-info.btn-lg {
+    	float: none;
+        padding: 5px 10px 5px 10px;
+    	margin-left: 15px;
+    	display: block;
+    	margin-right: 15px;
+    	margin-top: 15px;
+    }
+}
+
+/************************************/
+/*		  ONLINE USER STYLINGS      */
+/************************************/
+
 
 /* Online Users Styles */
+
 #peopleOnline {
-	display: inline-block;
-    height: 420px;
+    display: inline-block;
     width: 100%;
     padding: 0px 16px;
-    overflow-y: auto;
 }
 
 .online {
-	border: 5px solid lightgreen;
-	background-color: lightgreen;
-	border-radius: 5px;
+    border: 5px solid lightgreen;
+    background-color: lightgreen;
+    border-radius: 5px;
     width: 100%;
-	padding: 20px;
-	display: none;
+    padding: 0px 10px 0px 10px;
+    display: none;
 }
 
-/* Chat Styles */
+.user {
+    color: rgba(58, 151, 46, 1);
+    text-shadow: 1px 1px #81ff31;
+}
+
+.online-users {
+    overflow-y: auto;
+    height: 100%;
+    -webkit-overflow-scrolling: touch;
+}
+
+/********************************/
+/*		  CHATBOX STYLINGS      */
+/********************************/
+
 #chat {
-	overflow-y: auto;
-    word-wrap: break-word;
-	height: 420px;
-	padding: 14px 16px;
-	font-size: 18px;
-	line-height: 1.3333333;
-	color: #333333;
-	background-color: #ffffff;
-	background-image: none;
-	border: 1px solid #cccccc;
-	border-radius: 6px;
+    overflow-y: auto;
+    word-wrap: normal;
+    height: 100%;
+    padding: 14px 16px;
+    font-size: 18px;
+    line-height: 1.3333333;
+    color: #333333;
+    background-color: #ffffff;
+    background-image: none;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    -webkit-overflow-scrolling: touch;
 }
 
 .name {
     font-weight: bolder;
+}
+
+.user-msg {
+    color: #7d7d7d;
+}
+
+
+/* Chatting As Stylings */
+
+i.fa.fa-comment {
+    color: rgba(9, 3, 1, 0.62);
+    font-size: 30px;
+}
+
+.chatting-as {
+    color: #585858;
 }

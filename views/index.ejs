@@ -24,20 +24,23 @@
 	<!-- Begin Primary Container -->
 	<div class="container-fluid">
 	    <!-- Welcome Responsive Row -->
-	    <div class="row-fluid">
-	        <div class="col-md-12">
+	    <div class="row-fluid header">
+	        <div class="col-md-6">
 				<h1><i class="fa fa-superpowers" aria-hidden="true"></i> Sock It! <small>Chat using sockets.</small></h1>
-				<hr>
 			</div>
+	        <div class="col-md-6">
+				<a class="btn btn-info btn-lg portfolio" id="portfolio-link"><i class="fa fa-external-link-square"></i> By Tim Knab</a>
+			</div>
+			<hr>
 		</div>
 		<!-- Online User's Row and Chat Log Row -->
-		<div class="row-fluid">
+		<div class="row-fluid full-height">
 			<!-- Users -->
-			<div class="col-md-3">
+			<div class="col-md-3 online-users">
 				<div id="peopleOnline" class="text-center margin-bottom-sm"></div>
 			</div>
 			<!-- Chat Log -->
-			<div class="col-md-9">
+			<div class="col-md-9" id="chat-wrapper">
 				<div id="chat"></div>
 			</div>
 		</div>
@@ -54,7 +57,7 @@
 						</div>
 						<button type="submit" class="btn btn-primary btn-block margin-top-sm"><h4><i class="fa fa-send" aria-hidden="true"></i> Send</h4></button>
 					</form>
-					<h4><i class="fa fa-user-circle" aria-hidden="true"></i> <em>Chatting as: <span id="name"></span></em></h4>
+					<h4 class="chatting-as"><i class="fa fa-user-circle-o" aria-hidden="true"></i> <em>Chatting as: <span id="name"></span></em></h4>
 				</div>
 			</div>
 		</div>

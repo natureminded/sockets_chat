@@ -27,7 +27,7 @@ module.exports = function(server){
 			helpers.users.push({name: name, id: socket.id});
 
 			// Make a join message with timestamp:
-			var message = {id: socket.id, timestamp: helpers.getCurrentTime(), name: name, message: '<em>' + name + ' has joined.</em>'};
+			var message = {id: socket.id, timestamp: helpers.getCurrentTime(), name: name, message: '<strong">👤' + name + ' has joined.</strong>'};
 
 			// Universal Emit User Joined for all users to update chat:
 			io.emit('userJoined', {name: name, id: socket.id}, message);
@@ -97,7 +97,7 @@ module.exports = function(server){
 				*/
 
 				// Create user disconnect message containing timestamp:
-				var message = {id: user.id, timestamp: helpers.getCurrentTime(), name: user.name, message: '<em>' + user.name + ' has left the chat.</em>'};
+				var message = {id: user.id, timestamp: helpers.getCurrentTime(), name: user.name, message: '<em>✌️' + user.name + ' has left the chat.</em>'};
 
 				// Add disconnect message to chat log:
 				helpers.chatLog.push(message);

@@ -29,7 +29,7 @@ $(document).ready(function() {
 			*/
 
 			// Add user as HTML element to DOM:
-			$('#peopleOnline').append('<div id="'+user.id+'" class="online margin-bottom-sm"><h3> '+user.name+'</h3></div>');
+			$('#peopleOnline').append('<div id="'+user.id+'" class="online margin-bottom-sm"><h3 class="user"><i class="fa fa-user-circle-o user"></i> '+user.name+'</h3></div>');
 		},
 		checkDupes : function(name, users){
 			/*
@@ -230,4 +230,12 @@ $(document).ready(function() {
 		// Updates chat text with user left message:
 		methods.updateChatText(message);
 	});
+
+	// Load Portfolio:
+	$(' #portfolio-link ').click( function() {
+		window.open(
+			"http://sasquat.ch",
+			"_blank",
+		);
+	})
 });
