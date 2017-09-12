@@ -233,6 +233,7 @@ $(document).ready(function() {
 
 	// Load Portfolio:
 	$(' #portfolio-link ').click( function() {
+		// Loads homepage:
 		window.open(
 			"http://sasquat.ch",
 			"_blank",
