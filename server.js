@@ -11,6 +11,7 @@ app.use(express.static(path.join(__dirname, 'static')));
 
 // ROUTES
 app.get('/', function(req, res){
+	console.log(req.ip);
 	res.render('index');
 });
 

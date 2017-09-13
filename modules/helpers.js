@@ -25,12 +25,13 @@ module.exports = function(moment){
 			Returns current time as locale date string.
 			*/
 
-			var now = new Date();
 			const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
 			const currentTime = moment().tz(timezone).format('hh:mm:ss A');
+			var offset = new Date().getTimezoneOffset();
 			console.log('$$$$$$$$$$$$$');
 			console.log(timezone);
 			console.log(currentTime);
+			console.log(offset);
 			console.log('$$$$$$$$$$$$$');
 			return currentTime;
 
