@@ -3,8 +3,11 @@ This is the primary sockets file. This file sets up socket.io and emits the firs
 */
 
 module.exports = function(server){
+	// SETUP MOMENT JS
+	var moment = require('moment-timezone');
+
 	// IMPORT CUSTOM HELPERS MODULE
-	var helpers = require('./helpers.js')();
+	var helpers = require('./helpers.js')(moment);
 
 	// SETUP SOCKETS
 	var io = require('socket.io').listen(server);

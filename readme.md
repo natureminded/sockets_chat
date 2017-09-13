@@ -19,4 +19,10 @@ Sock it! is a javascript powered chat using socket.io. Clients can connect and c
 	- Fade grey when logout (change class)
 
 ## Bugs list:
+	- Mobile-issue: If user types too long of a message, it gets erased and the line empties and they have to start over (why does this happen?)
+
+	- Mobile Breakpoint: The screen widths of 992px -> 1006px have some issues at this breakpoint. Anything bigger is OK, anything smaller is OK, but this one window of width causes the user list and top button to stack irregularly.
+
+	- Timestamps currently reflect that of server, NOT that of user. Need to adjust for local user time.
+
 	- If user waits to enter name, the socket connection seems to timeout and the user's chats do not post.
