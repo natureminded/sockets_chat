@@ -28,12 +28,11 @@ module.exports = function(moment){
 			const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
 			const currentTime = moment().tz(timezone).format('hh:mm:ss A');
 			var offset = new Date().getTimezoneOffset();
-			var guess = moment().tz.guess();
 			console.log('$$$$$$$$$$$$$');
 			console.log(timezone);
 			console.log(currentTime);
 			console.log(offset);
-			console.log(guess);
+			console.log(moment.tz.guess())
 			console.log('$$$$$$$$$$$$$');
 			return currentTime;
 

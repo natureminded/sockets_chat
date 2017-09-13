@@ -8,10 +8,11 @@ var app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 app.use(express.static(path.join(__dirname, 'static')));
+app.use('/moment', express.static(__dirname + '/node_modules/moment/'));
+app.use('/moment-timezone', express.static(__dirname + '/node_modules/moment-timezone/'));
 
 // ROUTES
 app.get('/', function(req, res){
-	console.log(req.ip);
 	res.render('index');
 });
 
