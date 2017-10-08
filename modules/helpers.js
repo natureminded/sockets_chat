@@ -28,10 +28,14 @@ module.exports = function(moment){
 
 			const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
 			const currentTime = moment().tz(timezone).format('hh:mm:ss A');
+			const currTime = moment().tz(timezone);
 			var offset = new Date().getTimezoneOffset();
 
 			const tz = jstz.determine();
 
+			console.log('**');
+			console.log(currTime);
+			console.log('**');
 			console.log('$$$$$$ TIME STUFF $$$$$$');
 			console.log(timezone);
 			console.log(currentTime);
@@ -41,7 +45,7 @@ module.exports = function(moment){
 			console.log(tz.name());
 			console.log('------------------------');
 			console.log('$$$$$$$$$$$$$$$$$$$$$$$$');
-			return currentTime;
+			return currTime;
 
 		},
 		searchUsers : function(socket, usersList, callbackFunction){

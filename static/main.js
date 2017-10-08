@@ -15,23 +15,11 @@ $(document).ready(function() {
 			- `message` - Message to add.
 			*/
 
+			// Convert message timezone to client browser tz:
+			message.timestamp = moment(message.timestamp).tz(moment.tz.guess()).format('hh:mm:ss A');
+
 			// Add message as a new <p> element:
 			$('#chat').append('<p><em>(' + message.timestamp + ')</em> ' + message.message + '</p>');
-
-			console.log("####### TESTING TIME STUFF #########");
-			const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
-			const currentTime = moment().tz(timezone).format('hh:mm:ss A');
-			var offset = new Date().getTimezoneOffset();
-			console.log(timezone);
-			console.log(currentTime);
-			console.log(offset);
-			console.log(moment.tz.guess())
-			console.log('--------- CONVERSTION STUFF --------');
-			console.log(message.timestamp);
-			var momentConv = moment(message.timestamp).tz(moment.tz.guess()).format('hh:mm:ss A');
-			console.log(momentConv);
-			console.log('------------------------------------');
-			console.log("####################################");
 
 			// Scroll to most recent chat entry (scrolls to bottom of chat):
 			$('#chat').scrollTop($('#chat')[0].scrollHeight);
