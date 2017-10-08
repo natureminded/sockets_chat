@@ -28,7 +28,7 @@ $(document).ready(function() {
 			console.log(moment.tz.guess())
 			console.log('--------- CONVERSTION STUFF --------');
 			console.log(message.timestamp);
-			var momentConv = moment(message.timestamp, moment.tz.guess());
+			var momentConv = moment(message.timestamp).tz(moment.tz.guess()).format('hh:mm:ss A');
 			console.log(momentConv);
 			console.log('------------------------------------');
 			console.log("####################################");
