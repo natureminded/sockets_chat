@@ -26,6 +26,10 @@ $(document).ready(function() {
 			console.log(currentTime);
 			console.log(offset);
 			console.log(moment.tz.guess())
+			console.log('--------- CONVERSTION STUFF --------');
+			console.log(message.timestamp);
+			var momentConv = moment(message.timestamp, moment.tz.guess());
+			console.log('------------------------------------');
 			console.log("####################################");
 
 			// Scroll to most recent chat entry (scrolls to bottom of chat):
