@@ -15,8 +15,13 @@ $(document).ready(function() {
 			- `message` - Message to add.
 			*/
 
+
+			/*
+			Development Note: Maybe do something here where you do an if check, and if the date is older than today, have it list the actual DATE in the timestamp, otherwise, just list the TIME only.
+			*/
+
 			// Convert message timezone to client browser tz:
-			message.timestamp = moment(message.timestamp).tz(moment.tz.guess()).format('hh:mm:ss A');
+			message.timestamp = moment(message.timestamp).tz(moment.tz.guess()).format('h:mm:ss A');
 
 			// Add message as a new <p> element:
 			$('#chat').append('<p><em>(' + message.timestamp + ')</em> ' + message.message + '</p>');
