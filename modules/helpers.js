@@ -2,7 +2,6 @@
 This file is a helper module to our primary socket.io file ('./sockets.js'), and stores all chat data (user and chat text), and assists in some basic chat and user actions.
 */
 module.exports = function(moment){
-	var jstz = require('jstimezonedetect');
 	return {
 		users : [], // Stores our chat users.
 		chatLog : [], // Stores the actual chat log.
@@ -28,7 +27,6 @@ module.exports = function(moment){
 
 			const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
 			const currTime = moment().tz(timezone);
-
 			return currTime;
 
 		},
