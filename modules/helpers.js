@@ -27,24 +27,8 @@ module.exports = function(moment){
 			*/
 
 			const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
-			const currentTime = moment().tz(timezone).format('hh:mm:ss A');
 			const currTime = moment().tz(timezone);
-			var offset = new Date().getTimezoneOffset();
 
-			const tz = jstz.determine();
-
-			console.log('**');
-			console.log(currTime);
-			console.log('**');
-			console.log('$$$$$$ TIME STUFF $$$$$$');
-			console.log(timezone);
-			console.log(currentTime);
-			console.log(offset);
-			console.log(moment.tz.guess())
-			console.log('------------------------');
-			console.log(tz.name());
-			console.log('------------------------');
-			console.log('$$$$$$$$$$$$$$$$$$$$$$$$');
 			return currTime;
 
 		},
