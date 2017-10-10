@@ -202,7 +202,7 @@ body {
     }
 
     .col-md-3.online-users {
-    	height: 150px;
+    	max-height: 150px;
     	margin-bottom: 15px;
     }
 
