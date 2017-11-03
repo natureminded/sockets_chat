@@ -1,5 +1,5 @@
 # About:
-Sock it! is a light-weight chat powered by socket.io and ExpressJS. Clients can connect and chat with each other.
+Sock it! is a light-weight chat powered by Socket.io, Node and Express. Clients can connect and chat with each other.
 
 # Feature List So Far & General Notes:
 - Timezone conversion feature added.
