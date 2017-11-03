@@ -1,7 +1,7 @@
 # About:
 Sock it! is a light-weight chat powered by Socket.io, Node and Express. Clients can connect and chat with each other.
 
-# Feature:
+# Features:
 - Timezone conversion for user timestamps.
 - Displays logged in users.
 - New users fade in when joining chat.
