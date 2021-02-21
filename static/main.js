@@ -244,7 +244,7 @@ $(document).ready(function() {
 	$(' #portfolio-link ').click( function() {
 		// Loads homepage:
 		window.open(
-			"http://sasquat.ch",
+			"https://timknab.dev",
 			"_blank",
 		);
 	})

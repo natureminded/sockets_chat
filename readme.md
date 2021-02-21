@@ -1,7 +1,26 @@
-# About:
+# About
+
+- [About](#about)
+  - [Screenshots](#screenshots)
+  - [Technologies](#technologies)
+  - [Features](#features)
+  - [Features To Add / Ideas](#features-to-add--ideas)
+
 Sock it! is a light-weight chat powered by Socket.io, Node and Express. Clients can connect and chat with each other.
 
-# Features:
+## Screenshots
+
+![sockit](https://user-images.githubusercontent.com/20636750/108618510-ced08d80-73d3-11eb-98e2-c70444995ce5.png)
+
+## Technologies
+
+- Node.js/ExpressJS
+- Vanilla JS
+- Socket.io
+- Bootstrap
+
+## Features
+
 - Timezone conversion for user timestamps.
 - Displays logged in users.
 - New users fade in when joining chat.
@@ -9,7 +28,7 @@ Sock it! is a light-weight chat powered by Socket.io, Node and Express. Clients 
 - Users who logoff fade out.
 - Bootstrap, Bootstrap United theme, FontAwesome icon set.
 
-## Features To Add / Ideas:
+## Features To Add / Ideas
 
 - User typing detection feature which Uses keycodes (see Pacman project) to create '{{username}} is typing...' when users are entering messages.
 - Clean up mobile experience so chat displays cleaner -- change the way users are displayed (especially multiple users).
@@ -17,9 +36,3 @@ Sock it! is a light-weight chat powered by Socket.io, Node and Express. Clients 
 - Fade grey when logout (utilize jQuery change class).
 - Add emoji selector, or image or GIF uploader.
 - Change way chat log is stored or kept for longer chat transcripts.
-
-## Bugs list:
-
-- Mobile-issue: If user types too long of a message, it gets erased and the line empties and they have to start over (why does this happen?).
-
-- If user waits to enter name, the socket connection seems to timeout and the user's chats do not post.
